@@ -109,6 +109,8 @@ readreddits() {
   open "https://www.reddit.com/r/buildapc";
   open "https://www.reddit.com/r/pcmasterrace";
   open "https://www.reddit.com/r/battlestations";
+  open "https://www.reddit.com/r/battlestations";
+  open "https://www.reddit.com/r/pcmasterrace";
   open "https://www.reddit.com/r/history";
   open "https://www.reddit.com/r/diy";
   open "https://www.reddit.com/r/shittydiy";
