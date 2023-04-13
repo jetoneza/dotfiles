@@ -266,3 +266,18 @@ if [ -f '/Users/jeetkunedo/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/jeetkunedo/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jeetkunedo/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Switch NodeJS version
+cd () { builtin cd "$@" && chNodeVersion;  }
+pushd () { builtin pushd "$@" && chNodeVersion;  }
+popd () { builtin popd "$@" && chNodeVersion;  }
+chNodeVersion() {
+ # Use the NodeJS version specified in the file, if present
+ if [ -f ".nvmrc"  ] ; then
+    nvm use;
+ fi
+}
+chNodeVersion;
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(starship init zsh)"
