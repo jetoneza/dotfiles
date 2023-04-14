@@ -20,7 +20,6 @@ Plugin 'tpope/vim-abolish'
 Plugin 'mattn/emmet-vim'
 
 Plugin 'rbgrouleff/bclose.vim'
-Plugin 'vim-airline/vim-airline'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'Lokaltog/vim-easymotion'
 
@@ -56,10 +55,13 @@ Plugin 'https://github.com/gorodinskiy/vim-coloresque.git'
 Plugin 'itchyny/lightline.vim'
 
 Plugin 'wincent/command-t'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'ycm-core/YouCompleteMe'
 
 " Linters
 Plugin 'w0rp/ale'
+
+" Games
+Plugin 'ThePrimeagen/vim-be-good'
 
 call vundle#end()
 filetype plugin indent on
@@ -112,7 +114,7 @@ set noswapfile
 set wildmenu
 set nostartofline
 " (Hopefully) removes the delay when hitting esc in insert mode
-set noesckeys
+" set noesckeys
 set ttimeout
 set ttimeoutlen=1
 set listchars=tab:>-,trail:~,extends:>,precedes:<,space:.
@@ -254,7 +256,7 @@ let g:javascript_plugin_jsdoc = 1
 "                      APPEARENCE
 " =============================================================
 
-set term=xterm
+" set term=xterm
 set t_Co=256
 let &t_AB="\e[48;5;%dm"
 let &t_AF="\e[38;5;%dm"
