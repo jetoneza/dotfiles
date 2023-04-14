@@ -279,9 +279,15 @@ chNodeVersion() {
 }
 chNodeVersion;
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# Check if WSL2
+if ! [ -f /proc/sys/fs/binfmt_misc/WSLInterop ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 eval "$(starship init zsh)"
 
-# PBCOPY Alias - uncomment if not using linux
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
+# Check if WSL2
+if [ -f /proc/sys/fs/binfmt_misc/WSLInterop ]; then
+  alias pbcopy='xclip -selection clipboard'
+  alias pbpaste='xclip -selection clipboard -o'
+fi
