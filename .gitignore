@@ -1,4 +1,4 @@
 .vim
 .vimrc
 .zshrc
-./neovim/plugin/packer_compiled.lua
+neovim/plugin/packer_compiled.lua
