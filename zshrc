@@ -141,7 +141,7 @@ taildaemon() {
 alias taildmn=taildaemon
 
 # SSH
-alias sshkey="pbcopy < ~/.ssh/id_rsa.pub"
+alias sshkey="cat ~/.ssh/id_ed25519.pub | pbcopy"
 
 # Sandbox
 sandbox() {
@@ -266,3 +266,7 @@ if [ -f '/Users/jeetkunedo/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/jeetkunedo/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jeetkunedo/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# PBCOPY Alias - uncomment if not using linux
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
