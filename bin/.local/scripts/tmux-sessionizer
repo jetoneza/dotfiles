@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 
+sandbox_dir=/mnt/c/Users/Jetrooper/Documents/Programming/sandbox
+rust_proj_dir=/mnt/c/Users/Jetrooper/Documents/Programming/sandbox/rust
+
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/Workspace/work ~/Workspace/sandbox -mindepth 1 -maxdepth 1 -type d | fzf)
+  selected=$(find ~/ ~/.config ~/Workspace/work ~/Workspace/sandbox $sandbox_dir $rust_proj_dir -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then
