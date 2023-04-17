@@ -48,10 +48,20 @@ export PATH=/usr/local/sbin:$PATH
 
 alias root="cd ~/"
 
+# Tmux
+function tmuxinit() {
+  tmux new-session -s genesis -d
+  tmux send-keys -t genesis "neofetch" Enter
+  tmux attach -t genesis
+}
+alias tx=tmuxinit
+alias ta="tmux a"
+if [ "$TMUX" = "" ]; then tx; fi
+
 # ------------------------------------------
 # ZSH
 # ------------------------------------------
-alias ebash="sudo vim ~/.zshrc"
+alias ebash="sudo nvim ~/.zshrc"
 alias sbash=". ~/.zshrc"
 
 # ------------------------------------------
