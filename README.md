@@ -6,8 +6,13 @@
 cd ~
 git clone git@github.com:jetoneza/cnfgx.git .dotfiles
 cd .dotfiles
-git filter-branch --prune-empty --subdirectory-filter dotfiles/ HEAD
 ```
+
+### Install Nerd fonts
+https://www.nerdfonts.com/font-downloads
+
+* Used `MesloLGMDZ Nerd Font Mono` for alacritty.
+* `nvim-tree` also requires a Nerd font to display icons.
 
 ### Symbolic links
 
@@ -18,7 +23,7 @@ git filter-branch --prune-empty --subdirectory-filter dotfiles/ HEAD
 ln -s .dotfiles/neovim ~/.config/nvim
 ```
 
-# ZSH 
+# ZSH
 * Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh).
 * Create symbolic link to zshrc.
 ```
@@ -28,4 +33,9 @@ ln -s .dotfiles/zshrc .zshrc
 # Tmux
 ```
 ln -s .dotfiles/tmux/.tmux.conf ~/.tmux.conf
+```
+
+# Alacritty
+```
+ln -s .dotfiles/alacritty ~/.config/alacritty
 ```
