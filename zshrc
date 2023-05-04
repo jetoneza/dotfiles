@@ -50,6 +50,7 @@ alias root="cd ~/"
 
 # Tmux
 function tmuxinit() {
+  # Neofetch 
   tmux new-session -s genesis -d
   tmux send-keys -t genesis "neofetch" Enter
   tmux attach -t genesis
@@ -149,6 +150,11 @@ fi
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+# ------------------------------------------
+# HELP DOCS for i3
+ ------------------------------------------
+alias hi3='echo "$(<~/.dotfiles/i3/help.md)"'
 
 # ------------------------------------------
 # STARSHIP
