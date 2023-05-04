@@ -14,7 +14,7 @@ git filter-branch --prune-empty --subdirectory-filter dotfiles/ HEAD
 * Create symbolic links to neovim files.
 
 ```
-ln -s .dotfiles/neovim ~/.config/vim
+ln -s .dotfiles/neovim ~/.config/nvim
 ```
 
 ### ZSH Setup
