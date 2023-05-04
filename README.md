@@ -9,19 +9,23 @@ cd .dotfiles
 git filter-branch --prune-empty --subdirectory-filter dotfiles/ HEAD
 ```
 
-### NeoVim Setup
+### Symbolic links
 
-* Create symbolic links to neovim files.
+* Create symbolic links to configurations.
 
+# NeoVim
 ```
 ln -s .dotfiles/neovim ~/.config/nvim
 ```
 
-### ZSH Setup
-
+# ZSH 
 * Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh).
 * Create symbolic link to zshrc.
-
 ```
 ln -s .dotfiles/zshrc .zshrc
+```
+
+# Tmux
+```
+ln -s .dotfiles/tmux/.tmux.conf ~/.tmux.conf
 ```
