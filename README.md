@@ -18,24 +18,24 @@ https://www.nerdfonts.com/font-downloads
 
 * Create symbolic links to configurations.
 
-# NeoVim
+#### NeoVim
 ```
 ln -s .dotfiles/neovim ~/.config/nvim
 ```
 
-# ZSH
+#### ZSH
 * Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh).
 * Create symbolic link to zshrc.
 ```
 ln -s .dotfiles/zshrc .zshrc
 ```
 
-# Tmux
+#### Tmux
 ```
 ln -s .dotfiles/tmux/.tmux.conf ~/.tmux.conf
 ```
 
-# Alacritty
+#### Alacritty
 ```
 ln -s .dotfiles/alacritty ~/.config/alacritty
 ```
