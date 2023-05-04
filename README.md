@@ -4,7 +4,7 @@
 
 ```
 cd ~
-git clone git@github.com:jetoneza/cnfgx.git .dotfiles
+git clone git@github.com:jetoneza/dotfiles.git .dotfiles
 cd .dotfiles
 ```
 
