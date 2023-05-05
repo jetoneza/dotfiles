@@ -29,3 +29,7 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
 vim.g.mapleader = " "
+
+vim.g.blamer_enabled = 1
+vim.g.blamer_delay = 300
+vim.g.blamer_show_in_insert_modes = 0

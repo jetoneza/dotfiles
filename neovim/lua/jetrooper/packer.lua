@@ -32,6 +32,7 @@ return require('packer').startup(function(use)
 			require("nvim-tree").setup {}
 		end
 	}
+
   use 'nvim-lualine/lualine.nvim'
 
   use {
@@ -79,4 +80,6 @@ return require('packer').startup(function(use)
       require 'colorizer'.setup()
     end
   }
+
+  use 'APZelos/blamer.nvim'
 end)
