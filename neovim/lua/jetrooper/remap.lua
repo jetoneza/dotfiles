@@ -36,3 +36,5 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 -- Resize window
 vim.keymap.set("n", "<leader>h", ":vertical resize -2<CR>")
 vim.keymap.set("n", "<leader>l", ":vertical resize +2<CR>")
+
+vim.keymap.set("n", "<leader>sy", vim.cmd.PackerSync)
