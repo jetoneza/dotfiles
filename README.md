@@ -29,6 +29,7 @@ ln -s .dotfiles/neovim ~/.config/nvim
 ```
 ln -s .dotfiles/zshrc .zshrc
 ```
+* Install [starhip](https://starship.rs/).
 
 #### Tmux
 ```
