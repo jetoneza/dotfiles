@@ -13,3 +13,6 @@ font:
     family: "MesloLGMDZ Nerd Font Mono"
     style: "Regular"
   size: 16.0
+
+import:
+  - ~/.dotfiles/alacritty/themes/mocha.yml
