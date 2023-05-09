@@ -40,3 +40,5 @@ ln -s .dotfiles/tmux/.tmux.conf ~/.tmux.conf
 ```
 ln -s .dotfiles/alacritty ~/.config/alacritty
 ```
+### Git aliases
+* Open `/git/config` file and copy alias to `~/.gitconfig`
