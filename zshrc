@@ -123,17 +123,18 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Switch NodeJS version
-cd () { builtin cd "$@" && chNodeVersion;  }
-pushd () { builtin pushd "$@" && chNodeVersion;  }
-popd () { builtin popd "$@" && chNodeVersion;  }
-
-chNodeVersion() {
- # Use the NodeJS version specified in the file, if present
- if [ -f ".nvmrc"  ] ; then
-    nvm use;
- fi
-}
-chNodeVersion;
+# Uncomment if using nvm
+# cd () { builtin cd "$@" && chNodeVersion;  }
+# pushd () { builtin pushd "$@" && chNodeVersion;  }
+# popd () { builtin popd "$@" && chNodeVersion;  }
+#
+# chNodeVersion() {
+#  # Use the NodeJS version specified in the file, if present
+#  if [ -f ".nvmrc"  ] ; then
+#     nvm use;
+#  fi
+# }
+# chNodeVersion;
 
 # ------------------------------------------
 # WSL2
@@ -161,3 +162,7 @@ alias hi3='echo "$(<~/.dotfiles/i3/help.md)"'
 # ------------------------------------------
 eval "$(starship init zsh)"
 
+# ------------------------------------------
+# Fast Node Manager
+# ------------------------------------------
+eval "$(fnm env --use-on-cd)"
