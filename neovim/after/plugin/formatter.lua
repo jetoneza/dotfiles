@@ -22,6 +22,7 @@ require("formatter").setup({
     filetype = {
         javascript = prettierd,
         typescript = prettierd,
+        svelte = prettierd,
         lua = {
             function()
                 return {
