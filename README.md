@@ -20,25 +20,25 @@ https://www.nerdfonts.com/font-downloads
 
 #### NeoVim
 ```
-ln -s .dotfiles/neovim ~/.config/nvim
+ln -s ~/.dotfiles/neovim ~/.config/nvim
 ```
 
 #### ZSH
 * Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh).
 * Create symbolic link to zshrc.
 ```
-ln -s .dotfiles/zshrc .zshrc
+ln -s ~/.dotfiles/zshrc .zshrc
 ```
 * Install [starship](https://starship.rs/).
 
 #### Tmux
 ```
-ln -s .dotfiles/tmux/.tmux.conf ~/.tmux.conf
+ln -s ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
 ```
 
 #### Alacritty
 ```
-ln -s .dotfiles/alacritty ~/.config/alacritty
+ln -s ~/.dotfiles/alacritty ~/.config/alacritty
 ```
 #### Git aliases
 * Open `/git/config` file and copy alias to `~/.gitconfig`
