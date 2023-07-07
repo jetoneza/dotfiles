@@ -76,4 +76,6 @@ return require('packer').startup(function(use)
     use 'APZelos/blamer.nvim'
 
     use 'kdheepak/lazygit.nvim'
+
+    use 'petertriho/nvim-scrollbar'
 end)
