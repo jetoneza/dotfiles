@@ -72,10 +72,7 @@ require('lazy').setup({
 
   'mhartington/formatter.nvim',
 
-  {
-    'NvChad/nvim-colorizer.lua',
-    config = function() require'colorizer'.setup() end
-  },
+  'NvChad/nvim-colorizer.lua',
 
   'APZelos/blamer.nvim',
 

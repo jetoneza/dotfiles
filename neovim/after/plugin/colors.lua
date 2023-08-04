@@ -8,3 +8,5 @@ function ApplyTheme(color)
 end
 
 ApplyTheme()
+
+require 'colorizer'.setup()
