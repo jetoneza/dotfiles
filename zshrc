@@ -166,3 +166,8 @@ eval "$(starship init zsh)"
 # Fast Node Manager
 # ------------------------------------------
 eval "$(fnm env --use-on-cd)"
+
+# ------------------------------------------
+# Go module vendor
+# ------------------------------------------
+alias gomodvendor="go mod verify && go mod tidy && go mod vendor"
