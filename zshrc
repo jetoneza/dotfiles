@@ -171,3 +171,12 @@ eval "$(fnm env --use-on-cd)"
 # Go module vendor
 # ------------------------------------------
 alias gomodvendor="go mod verify && go mod tidy && go mod vendor"
+
+# ------------------------------------------
+# PNPM
+# ------------------------------------------
+export PNPM_HOME="/opt/homebrew/bin/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
