@@ -168,9 +168,10 @@ eval "$(starship init zsh)"
 eval "$(fnm env --use-on-cd)"
 
 # ------------------------------------------
-# Go module vendor
+# Go aliases
 # ------------------------------------------
 alias gomodvendor="go mod verify && go mod tidy && go mod vendor"
+alias air='$(go env GOPATH)/bin/air'
 
 # ------------------------------------------
 # PNPM
