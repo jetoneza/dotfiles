@@ -23,6 +23,9 @@ require("formatter").setup({
         javascript = prettierd,
         typescript = prettierd,
         svelte = prettierd,
+        javascriptreact = prettierd,
+        typescriptreact = prettierd,
+        css = prettierd,
         lua = {
             function()
                 return {
