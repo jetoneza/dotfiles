@@ -52,7 +52,20 @@ require('lazy').setup({
       {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
       -- Autocompletion
-      {'hrsh7th/nvim-cmp'},     -- Required
+      {
+        'hrsh7th/nvim-cmp',
+        dependencies = {
+          {
+            "zbirenbaum/copilot-cmp",
+            dependencies = "copilot.lua",
+            opts = {},
+            config = function(_, opts)
+              local copilot_cmp = require("copilot_cmp")
+              copilot_cmp.setup(opts)
+            end,
+          },
+        },
+      },     -- Required
       {'hrsh7th/cmp-nvim-lsp'}, -- Required
       {'L3MON4D3/LuaSnip'},     -- Required
     }
@@ -103,5 +116,19 @@ require('lazy').setup({
     end
   },
 
-  { "folke/neodev.nvim", opts = {} }
+  { "folke/neodev.nvim", opts = {} },
+
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    build = ":Copilot auth",
+    opts = {
+      suggestion = { enabled = false },
+      panel = { enabled = false },
+      filetypes = {
+        markdown = true,
+        help = true,
+      },
+    },
+  },
 })
