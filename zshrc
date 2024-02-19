@@ -11,7 +11,7 @@
 #                                                                        88                                   
 #  
 # Jethro Ordaneza
-# https://www.jetordaneza.com/, https://github.com/jetonzea/, https://www.youtube.com/@jetrooper_gaming/
+# https://www.jetordaneza.com/, https://github.com/jetoneza/, https://www.youtube.com/@jetrooper_gaming/
 
 # -----------------------------------
 #  ZSH Configuration
