@@ -58,6 +58,17 @@ require("formatter").setup({
                 }
             end
         },
+        proto = {
+            function()
+                return {
+                    exe = "buf",
+                    args = {
+                        util.escape_path(util.get_current_buffer_file_path())
+                    },
+                    stdin = true
+                }
+            end
+        },
         -- Use the special "*" filetype for defining formatter configurations on
         -- any filetype
         ["*"] = {
