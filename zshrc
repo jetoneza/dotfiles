@@ -188,6 +188,8 @@ eval "$(fnm env --use-on-cd)"
 alias gomodvendor="go mod verify && go mod tidy && go mod vendor"
 alias air='$(go env GOPATH)/bin/air'
 
+export PATH="$PATH:$(go env GOPATH)/bin"
+
 # ------------------------------------------
 # PNPM
 # ------------------------------------------
