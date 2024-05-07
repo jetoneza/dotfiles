@@ -2,7 +2,7 @@
 local util = require("formatter.util")
 
 -- prettierd formatter
-prettierd = {
+local prettierd = {
     function()
         return {
             exe = "prettierd",
