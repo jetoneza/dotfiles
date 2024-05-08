@@ -40,4 +40,20 @@ end)
 
 lsp.setup()
 
+require("mason-lspconfig").setup {
+    handlers = {
+        lua_ls = function()
+            local lspconfig = require("lspconfig")
+            lspconfig.lua_ls.setup {
+                settings = {
+                    Lua = {
+                        -- NOTE: toggle below to ignore Lua_LS's noisy `missing-fields` warnings
+                        diagnostics = { disable = { 'missing-fields' } },
+                    }
+                }
+            }
+        end
+    }
+}
+
 vim.diagnostic.config({virtual_text = true})
