@@ -92,13 +92,6 @@ alias gitr=gitrebase
 gitpush() { git push origin $1; }
 alias gitp=gitpush
 
-gitshort() {
-  gits;
-  gitf;
-  gitr master;
-}
-alias gitx=gitshort
-
 # ------------------------------------------
 # SSH
 # ------------------------------------------
