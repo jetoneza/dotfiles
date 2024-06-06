@@ -104,7 +104,12 @@ gch() {
   echo $fg[green]"     style:${reset_color} Changes that do not affect the code’s functionality (e.g., formatting)."
   echo $fg[green]"  refactor:${reset_color} Code modifications without changing its behavior."
   echo $fg[green]"      perf:${reset_color} Performance improvements."
-  echo $fg[green]"      test:${reset_color} Adding or modifying tests."
+  echo $fg[green]"      test:${reset_color} Adding or modifying tests.\n"
+  echo "  Example:\n"
+  echo $fg[green]"  feat(homepage):${reset_color} Add carousel feature to showcase testimonials\n"
+  echo "  Implemented a carousel component on the homepage"
+  echo "  Added client testimonials section for improved user engagement\n"
+  echo "  Fixes $fg[red]#12"
 }
 
 # ------------------------------------------
@@ -193,10 +198,10 @@ eval "$(fnm env --use-on-cd)"
 # ------------------------------------------
 # Go aliases
 # ------------------------------------------
+export PATH="$PATH:$(go env GOPATH)/bin"
+
 alias gomodvendor="go mod verify && go mod tidy && go mod vendor"
 alias air='$(go env GOPATH)/bin/air'
-
-export PATH="$PATH:$(go env GOPATH)/bin"
 
 # ------------------------------------------
 # PNPM
