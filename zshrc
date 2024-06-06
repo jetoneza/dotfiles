@@ -116,6 +116,7 @@ gch() {
 # SSH
 # ------------------------------------------
 alias sshkey="cat ~/.ssh/id_ed25519.pub | pbcopy"
+alias cprsa="cat ~/.ssh/id_rsa.pub | pbcopy"
 
 # ------------------------------------------
 # Process
