@@ -92,6 +92,21 @@ alias gitr=gitrebase
 gitpush() { git push origin $1; }
 alias gitp=gitpush
 
+gch() {
+  echo $fg[green]"  Git Commit Formats:\n"$reset_color
+  echo "  <type>[optional scope]: <description>"
+  echo "  [optional body]"
+  echo "  [optional footer(s)]\n"
+  echo $fg[green]"     build:${reset_color} Changes related to build processes or tools."
+  echo $fg[green]"     chore:${reset_color} Regular maintenance or administrative tasks."
+  echo $fg[green]"        ci:${reset_color} Updates to the continuous integration setup."
+  echo $fg[green]"      docs:${reset_color} Documentation-related changes."
+  echo $fg[green]"     style:${reset_color} Changes that do not affect the code’s functionality (e.g., formatting)."
+  echo $fg[green]"  refactor:${reset_color} Code modifications without changing its behavior."
+  echo $fg[green]"      perf:${reset_color} Performance improvements."
+  echo $fg[green]"      test:${reset_color} Adding or modifying tests."
+}
+
 # ------------------------------------------
 # SSH
 # ------------------------------------------
