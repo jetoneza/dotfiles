@@ -118,24 +118,6 @@ gch() {
 alias sshkey="cat ~/.ssh/id_ed25519.pub | pbcopy"
 
 # ------------------------------------------
-# SANDBOX
-# ------------------------------------------
-# Go to sandbox folder
-sandbox() {
-  cd /mnt/c/Users/Jetrooper/Documents/Programming/sandbox
-}
-
-alias sbox=sandbox
-
-# ------------------------------------------
-# LS Shortcuts
-# ------------------------------------------
-alias lsf="ls -GHf"
-alias ls="ls -GFh"
-alias ll="ls -l"
-alias la="ls -la"
-
-# ------------------------------------------
 # Process
 # ------------------------------------------
 killport() {
@@ -149,20 +131,6 @@ killport() {
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Switch NodeJS version
-# Uncomment if using nvm
-# cd () { builtin cd "$@" && chNodeVersion;  }
-# pushd () { builtin pushd "$@" && chNodeVersion;  }
-# popd () { builtin popd "$@" && chNodeVersion;  }
-#
-# chNodeVersion() {
-#  # Use the NodeJS version specified in the file, if present
-#  if [ -f ".nvmrc"  ] ; then
-#     nvm use;
-#  fi
-# }
-# chNodeVersion;
 
 # ------------------------------------------
 # WSL2
