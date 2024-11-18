@@ -52,6 +52,8 @@ require("mason-lspconfig").setup {
                     }
                 }
             }
+
+            lspconfig.jdtls.setup{}
         end
     }
 }

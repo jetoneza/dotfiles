@@ -1,15 +1,15 @@
-#                                                                                                             
-#         88                                                                                                  
-#         88                ,d                                                                                
-#         88                88                                                                                
-#         88   ,adPPYba,  MM88MMM  8b,dPPYba,   ,adPPYba,    ,adPPYba,   8b,dPPYba,    ,adPPYba,  8b,dPPYba,  
-#         88  a8P_____88    88     88P'   "Y8  a8"     "8a  a8"     "8a  88P'    "8a  a8P_____88  88P'   "Y8  
-#         88  8PP"""""""    88     88          8b       d8  8b       d8  88       d8  8PP"""""""  88          
-# 88,   ,d88  "8b,   ,aa    88,    88          "8a,   ,a8"  "8a,   ,a8"  88b,   ,a8"  "8b,   ,aa  88          
-#  "Y8888P"    `"Ybbd8"'    "Y888  88           `"YbbdP"'    `"YbbdP"'   88`YbbdP"'    `"Ybbd8"'  88          
-#                                                                        88                                   
-#                                                                        88                                   
-#  
+#
+#         88
+#         88                ,d
+#         88                88
+#         88   ,adPPYba,  MM88MMM  8b,dPPYba,   ,adPPYba,    ,adPPYba,   8b,dPPYba,    ,adPPYba,  8b,dPPYba,
+#         88  a8P_____88    88     88P'   "Y8  a8"     "8a  a8"     "8a  88P'    "8a  a8P_____88  88P'   "Y8
+#         88  8PP"""""""    88     88          8b       d8  8b       d8  88       d8  8PP"""""""  88
+# 88,   ,d88  "8b,   ,aa    88,    88          "8a,   ,a8"  "8a,   ,a8"  88b,   ,a8"  "8b,   ,aa  88
+#  "Y8888P"    `"Ybbd8"'    "Y888  88           `"YbbdP"'    `"YbbdP"'   88`YbbdP"'    `"Ybbd8"'  88
+#                                                                        88
+#                                                                        88
+#
 # Jethro Ordaneza
 # https://www.jetordaneza.com/, https://github.com/jetoneza/, https://www.youtube.com/@jetrooper_gaming/
 
@@ -65,7 +65,7 @@ alias root="cd ~/"
 
 # Tmux
 function tmuxinit() {
-  # Neofetch 
+  # Neofetch
   tmux new-session -s genesis -d
   tmux send-keys -t genesis "neofetch" Enter
   tmux attach -t genesis
@@ -185,3 +185,18 @@ esac
 # NPM
 # ------------------------------------------
 export NPM_TOKEN=$(cat ~/.npmrc | sed 's/.*authToken=\(.*\)/\1/')
+
+# ------------------------------------------
+# Java
+# ------------------------------------------
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-21.jdk/Contents/Home
+export PATH="${JAVA_HOME}/bin:${PATH}"
+
+# ------------------------------------------
+# Google Cloud
+# ------------------------------------------
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/jetrooper/Google/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jetrooper/Google/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/jetrooper/Google/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jetrooper/Google/google-cloud-sdk/completion.zsh.inc'; fi
