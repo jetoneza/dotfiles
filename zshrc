@@ -122,8 +122,24 @@ alias cprsa="cat ~/.ssh/id_rsa.pub | pbcopy"
 # Process
 # ------------------------------------------
 killport() {
-  echo "${GREEN}sudo lsof -i tcp:${1}${NORMAL}"
-  echo "${RED}kill -9 PID ${NORMAL}"
+  if [ -z "$1" ]; then
+    echo "Usage: killport <port>"
+    return 1
+  fi
+
+  local PORT=$1
+  local PIDS=$(sudo lsof -i tcp:$PORT | awk 'NR>1 {print $2}' | grep -E '^[0-9]+$' | sort -u)
+
+  if [ -z "$PIDS" ]; then
+    echo "Port $PORT is not in use"
+    return 0
+  fi
+
+  echo "Killing procesess on port $PORT"
+  echo "PIDS on $PORT:"
+  echo "$PIDS\n"
+  echo "$PIDS" | xargs sudo kill -9
+  echo "Done!"
 }
 
 # ------------------------------------------
@@ -200,3 +216,18 @@ if [ -f '/Users/jetrooper/Google/google-cloud-sdk/path.zsh.inc' ]; then . '/User
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/jetrooper/Google/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jetrooper/Google/google-cloud-sdk/completion.zsh.inc'; fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/jetrooper/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/jetrooper/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/jetrooper/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/jetrooper/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
