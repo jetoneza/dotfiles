@@ -1,0 +1,16 @@
+
+[font]
+size = 16.0
+
+[font.normal]
+family = "MesloLGMDZ Nerd Font Mono"
+style = "Regular"
+
+[window]
+decorations = "buttonless"
+dynamic_padding = false
+opacity = 0.95
+
+[general]
+live_config_reload = true
+import = ["/Users/jet_bookipi/.dotfiles/alacritty/themes/mocha.toml"]
