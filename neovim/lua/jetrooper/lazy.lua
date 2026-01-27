@@ -42,34 +42,32 @@ require('lazy').setup({
 
   'nvim-lualine/lualine.nvim',
 
+  -- LSP Support
   {
-    'VonHeikemen/lsp-zero.nvim',
-    branch = 'v2.x',
+    "williamboman/mason.nvim",
     dependencies = {
-      -- LSP Support
-      {'neovim/nvim-lspconfig'},             -- Required
-      {'williamboman/mason.nvim'},           -- Optional
-      {'williamboman/mason-lspconfig.nvim'}, -- Optional
-
-      -- Autocompletion
-      {
-        'hrsh7th/nvim-cmp',
-        dependencies = {
-          {
-            "zbirenbaum/copilot-cmp",
-            dependencies = "copilot.lua",
-            opts = {},
-            config = function(_, opts)
-              local copilot_cmp = require("copilot_cmp")
-              copilot_cmp.setup(opts)
-            end,
-          },
-        },
-      },     -- Required
-      {'hrsh7th/cmp-nvim-lsp'}, -- Required
-      {'L3MON4D3/LuaSnip'},     -- Required
-    }
+      "williamboman/mason-lspconfig.nvim",
+      "neovim/nvim-lspconfig",
+    },
   },
+
+  -- Autocompletion
+  {
+    'hrsh7th/nvim-cmp',
+    dependencies = {
+      {
+        "zbirenbaum/copilot-cmp",
+        dependencies = "copilot.lua",
+        opts = {},
+        config = function(_, opts)
+          local copilot_cmp = require("copilot_cmp")
+          copilot_cmp.setup(opts)
+        end,
+      },
+    },
+  },     -- Required
+  {'hrsh7th/cmp-nvim-lsp'}, -- Required
+  {'L3MON4D3/LuaSnip'},     -- Required
 
   {
     "windwp/nvim-autopairs",
@@ -115,8 +113,6 @@ require('lazy').setup({
       }
     end
   },
-
-  { "folke/neodev.nvim", opts = {} },
 
   {
     "zbirenbaum/copilot.lua",
