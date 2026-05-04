@@ -6,7 +6,10 @@ local prettierd = {
     function()
         return {
             exe = "prettierd",
-            args = {vim.api.nvim_buf_get_name(0)},
+            args = {
+                "--stdin-filepath",
+                util.escape_path(util.get_current_buffer_file_path())
+            },
             stdin = true
         }
     end
