@@ -64,6 +64,15 @@ vim.lsp.config('*', {
     capabilities = lsp_capabilities,
     settings = {workingDirectory = {mode = "auto"}}
 })
+vim.lsp.config("lua_ls", {
+    settings = {
+        Lua = {
+            runtime = {version = "LuaJIT"},
+            diagnostics = {globals = {"vim"}},
+            workspace = {checkThirdParty = false}
+        }
+    }
+})
 
 vim.diagnostic.config({
     virtual_text = true,
